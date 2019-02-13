@@ -66,6 +66,20 @@ h1, h2, h3, h4, h5 {
 /* Your code starts here! */
 
 /*Global*/
+@font-face{
+	font-family: Tangerine;
+	src: url('https://fonts.gstatic.com/s/tangerine/v10/IurY6Y5j_oScZZow4VOxCZZM.woff2');
+}
+@keyframes button{
+	50%{
+		border-radius: 50%;
+		padding: 20px;
+		border: 1.5px dashed black;
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
 html{
 	box-sizing: border-box;
 }
@@ -81,6 +95,10 @@ body{
 	padding: 0px;
 	margin: 0px;
 }
+p{
+	font-family: Tangerine;
+	font-size: 20px;
+}
 
 /*Nav*/
 nav{
@@ -88,24 +106,34 @@ nav{
 	width: 100%;
 	text-align: center;
 	box-sizing: border-box;
-	vertical-align: middle;
+	vertical-align: top;
+	position: sticky;
+	top: 0px;
+	background: grey;
 }
 nav a{
 	margin: 0px 20px 0px 20px;
 	color: lightgrey;
 	text-decoration: none;
 }
-nav img{
+nav div{
+	display: inline-block;
 	margin: 20px 0px 0px 50px;
+	height: 36px;
+	width: 183px;
+	background-image: url(../img/logo.png);
+	background-size: contain;
 }
 
 /*Header*/
 header{
 	margin: 30px 0;
+	width: 100%;
 	height: 300px;
 	text-align: right;
-	vertical-align: top;
+	vertical-align: baseline;
 	border-bottom: 1px solid grey;
+	display: inline-block;
 }
 header .header-text{
 	display: inline-block;
@@ -126,12 +154,18 @@ header button{
 	border: 1px solid black;
 	padding: 2.5px 20px;
 }
+header button:hover{
+	animation: button 5s linear 0s infinite normal;
+}
 header .header-image{
 	display: inline-block;
-	height: 300px;
+	height: 250px;
 	width: 50%;
 	box-sizing: border-box;
 	text-align: right;
+	background-image: url('../img/header-img.png');
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 header img{
 	height: 250px;
@@ -151,8 +185,12 @@ header img{
 .top h2{
 	margin-bottom: 15px;
 }
-img.middle-img{
-	width: 800px;
+.middle-img{
+	width: 100%;
+	height: 166px;
+	background-image: url(../img/mid-page-accent.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 /*Bottom-Main*/
